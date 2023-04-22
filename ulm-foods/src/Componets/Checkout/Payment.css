@@ -1,0 +1,48 @@
+.payment {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.payment img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+.payment a {
+  text-decoration: none;
+}
+.payment .span {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+.payment p {
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .payment {
+    display: flex;
+    flex-direction: column;
+  }
+  .payment p {
+    margin-top: 20px;
+  }
+  .payment img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+  }
+  .payment .span {
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .mobile-pay {
+    margin-top: -30px;
+  }
+}

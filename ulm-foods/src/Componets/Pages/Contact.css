@@ -1,0 +1,48 @@
+.contact{
+    background-color: rgba(247, 248, 248, 0.801);
+    height: 100%;
+    margin-bottom: -30px;
+    
+}
+.contact-section{
+    text-align: center;
+    padding: 20px;
+}
+.contact-section h3{
+    text-transform: capitalize;
+    color: rgb(2, 2, 39);
+    font-weight: 700;
+    font-size: 30px;
+}
+.contact .col-md-8{
+    margin-bottom: 200px;
+}
+.contact input{
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.contact label{
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+.contact input::placeholder{
+    color: black;
+    font-size: 12px;
+    font-weight: normal;
+}
+.contact textarea{
+    padding: 10px;
+        margin: 10px 0px;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+}

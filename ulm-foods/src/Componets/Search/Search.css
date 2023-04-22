@@ -1,0 +1,88 @@
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+.cartWhat{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.top{
+    height: 10vh;
+    padding: 10px;
+    background-color: #202c45ea;
+   
+}
+
+.search .tax h3{
+    color: white;
+}
+
+.search i{
+    color: white;
+    font-size: 40px;
+    margin: 0px 40px;
+}
+.search .icons{
+    color: white;
+        font-size: 40px;
+        margin: 0px 40px;
+}
+.whatsapp{
+    color: rgba(13, 211, 13, 0.877) !important;
+}
+@media screen and (max-width:576px) {
+    .search input{
+        display: none;
+    }
+    
+    .cartWhat i{
+        margin-right: -5px;
+    }
+    .cartWhat .icons{
+        margin-right: -10px;
+    }
+        .search .tax h3 {
+            font-size: 15px;
+            padding-top: 15px;
+        }
+}
+@media screen and (max-width:380px) {
+    .search .tax h3 {
+            font-size: 15px;
+            padding-top: 2px;
+        }
+}
+@media screen and (max-width:325px) {
+    .search .tax h3 {
+            font-size: 12px;
+           
+        }
+}
+@media screen and (max-width:1024px) {
+    .top {
+            height: 15vh;
+            
+        }
+}
+@media screen and (max-width:829px) {
+    .top {
+            height: 10vh;
+            
+        }
+}
+@media screen and (max-width:320px) {
+    .search .tax h3 {
+        font-size: 10px;
+        
+    }
+   
+    .top{
+        height: 15vh;
+        margin-top: -33px;
+    }
+    
+       
+}

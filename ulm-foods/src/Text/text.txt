@@ -1,0 +1,38 @@
+import React, { createContext, useState } from "react";
+
+export const UserContext = createContext();
+
+const UserPersonal = ({ children }) => {
+  const [person, setPerson] = useState(true);
+  const login = (person) => {
+    setPerson(person);
+  };
+  const logout = () => {
+    setPerson(null);
+  };
+  const value = { login, logout, person };
+
+  return (
+    <React.Fragment>
+      <UserContext.Provider>{children}</UserContext.Provider>
+    </React.Fragment>
+  );
+};
+
+export default UserPersonal;
+
+
+const { person } = useContext(UserContext);
+
+  const func = () => {
+    const variable = items.line_total.formatted_with_symbol;
+    const yake = variable.slice(2);
+    const final = "Kr" + yake * 10 + ".00";
+
+    return final;
+  };
+  const func2 = () => {
+    const variable = items.line_total.formatted_with_symbol;
+
+    return variable;
+  };

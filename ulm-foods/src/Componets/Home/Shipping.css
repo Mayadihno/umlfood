@@ -1,0 +1,21 @@
+.truck{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.truck i {
+    font-size: 35px;
+    margin: 0px 12px;
+}
+.truck-text{
+    margin-top: 10px;
+}
+.truck h6{
+    font-weight: 800;
+    font-size: 14px;
+    margin-right: 3px;
+}
+.truck p{
+  font-size: 12px;
+  font-weight: 600;
+}

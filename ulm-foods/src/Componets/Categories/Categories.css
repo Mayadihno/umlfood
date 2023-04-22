@@ -1,0 +1,13 @@
+.headline{
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px ;
+    text-align: center;
+}
+
+.headline small {
+    font-size: 18px;
+   
+}

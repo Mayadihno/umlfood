@@ -1,0 +1,50 @@
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.buttons a{
+    text-decoration: none;
+}
+
+
+.price{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.price h3{
+    margin: 20px 0px;
+    color: black;
+    font-size: 35px;
+    font-weight: 700;
+}
+.desc h6{
+    color: black;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 35px;
+}
+
+.debottom{
+    margin-bottom: 0px;
+}
+@media screen and (max-width:567px){
+    .price h3{
+        font-size: 16px;
+        font-weight: bolder;
+    }
+    .buttons{
+        display: flex;
+        width: 100% !important;
+        justify-content: space-between;
+    }
+    .startButton {
+        font-size: 10px !important;
+        font-weight: 600;
+    }
+    .debottom {
+            margin-bottom: 0px !important;
+    }
+}

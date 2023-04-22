@@ -1,0 +1,31 @@
+.images {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images img {
+    width: 170px;
+    height: 70px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.smilesPara{
+    text-align: center;
+    margin-top: 15px;
+    color: #202C45;
+    font-size: 20px;
+    font-weight: 600;
+}
+@media screen and (Max-width:600px) {
+    .smilesPara{
+        font-size: 14px;
+        padding: 0px 2px;
+        font-weight: bold;
+    }
+}

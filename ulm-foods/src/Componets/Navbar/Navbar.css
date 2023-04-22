@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
+.logo{
+    font-family: 'Rubik', sans-serif;
+    color: #202C45;
+    font-size: 50px;
+    font-weight: 900;
+    text-decoration: none;
+    margin-bottom: 10px;
+    mix-blend-mode: multiply;
+}
+.solution{
+    font-size: 14px;
+    font-style: italic;
+}
+
+.hide{
+  visibility: collapse;
+}
+.iconCart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links a{
+    font-weight: 800;
+    color: #202C45;
+    padding: 20px 20px 0px 20px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.active-links{
+    color: red !important;
+    font-size: 20px;
+    border-bottom: 2px solid #202C45;
+    font-family: 'Dancing Script', cursive;
+}
+.images{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+    
+}
+.searchComp{
+    margin-top: -30px;
+}
+.header.active {
+    height: 12vh;
+    position: fixed;
+    top: 0px;
+    z-index: 1000;
+    width: 100%;
+    background-color: #ecf0f3;
+    box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.75);
+    transition: 00.5s;
+    -webkit-transition: 00.5s;
+    -moz-transition: 00.5s;
+    -ms-transition: 00.5s;
+    -o-transition: 00.5s;
+}
+@media screen and (max-width:575px) {
+    .links a {
+            max-width: 140px;
+       
+        }
+                 .nav-link-mobile {
+                     position: absolute;
+                     display: block;
+                     list-style-type: none;
+                     box-shadow: rgba(50, 50, 93, 0.23) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+                     left: 0px;
+                     top: 0px;
+                     width: 60%;
+                     background-color: white;
+                     height: 100vh;
+                     z-index: 888;
+                     transition: all 0.5s ease-in-out;
+                     -webkit-transition: all 0.5s ease-in-out;
+                     -moz-transition: all 0.5s ease-in-out;
+                     -ms-transition: all 0.5s ease-in-out;
+                     -o-transition: all 0.5s ease-in-out;
+                 }
+}

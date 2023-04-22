@@ -1,0 +1,102 @@
+.downSection h4{
+color: #202C45;
+font-weight: 800;
+font-size: 25px;
+}
+.downSection {
+    padding: 20px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.downSection .buttons button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: white;
+    background-color: #202C45;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+.downSection .buttons button:hover {
+    background-color: #4B4453;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.downSection .buttons button:active {
+    transform: translateY(-1px);
+}
+
+.cart h3{
+    color: #202C45;
+    font-weight: 700;
+    font-size: 35px;
+    font-style: italic;
+}
+
+.cartItem img{
+    width: 500px;
+    height: 300px;
+}
+.cartItem .name{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+}
+.cartItem .name h4{
+    color: #202C45;
+    font-size: 20px;
+    font-weight: 800;
+}
+.cartItem .add{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.cartItem  h6{
+    color: #202C45;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.cartItem .add .btnadd{
+    border: none;
+    outline: none;
+    padding: 5px 20px;
+    background-color: #202C45;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.mbottom{
+    margin-bottom: 100px;
+}
+@media screen and (max-width:500px){
+    .downSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .downSection .buttons {
+        margin-top: 15px;
+    }
+    .downSection .buttons button{
+        font-size: 12px;
+    }
+}

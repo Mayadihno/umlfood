@@ -1,0 +1,50 @@
+header{
+    color: white;
+    background-color: #202C45;
+}
+.topbar{
+    padding: 10px;
+}
+.topbar .drinks{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.drinks h5{
+    font-weight: bolder;
+    font-size: 20px;
+}
+.topbar .icons{
+   display: flex;
+justify-content: space-between;
+}
+.topbar .icons-item{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.icons .icons-item i {
+    padding: 12px;
+    background-color: #EFEFEF;
+    color: #202C45;
+    font-size: 20px;
+    margin-right: 5px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+@media screen and (max-width:785px) {
+    .drinks .icons{
+        display: none;
+    }
+    .drinks{
+        text-align: center;
+    }
+    .drinks h5{
+        font-size: 14px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
+.footer{
+    background-color: #202C45;
+    text-align: center;
+   
+}
+.footer a{
+    color: white;
+    
+}
+.footer .icons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+.footer .icons i{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.location {
+    display: flex;
+    justify-content: center;
+    margin: 5px 20px;
+    color: white;
+}
+.solution{
+    font-size: 14px;
+    font-style: italic;
+}
+ .footer .logoss{
+    font-family: 'Rubik', sans-serif;
+    color: #ecf0f3 !important;
+    font-size: 60px;
+    font-weight: 900;
+    text-decoration: none;
+    margin-bottom: 10px;
+    z-index: -2;
+}
+
+
+.location .local i {
+    font-size: 55px;
+    margin: 10px 20px;
+    color: rgb(185, 2, 2);
+}
+
+.location .local-info p {
+    line-height: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.contact_info{
+    color: white;
+}
+.contact_info h3{
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 15px 0px;
+}
+
+
+.contact_info .info a{
+    margin: 0px 5px;
+    color: black;
+    font-weight: 600;
+    font-style: italic;
+}
+.features h3{
+    color: white;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 15px 0px;
+}
+.features .a-links{
+    display: flex;
+    flex-direction: column;
+    line-height: 65px;
+    
+}
+.features .a-links a{
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-weight: bold;
+    font-size: 18px;
+    font-style: italic;
+}
+.features .a-links a:hover{
+   transform: scale(1.1);
+   transition: 0.5s;
+   color: #848484;
+   -webkit-transform: scale(1.1);
+   -moz-transform: scale(1.1);
+   -ms-transform: scale(1.1);
+   -o-transform: scale(1.1);
+   -webkit-transition: 0.5s;
+   -moz-transition: 0.5s;
+   -ms-transition: 0.5s;
+   -o-transition: 0.5s;
+}
+.developer i{
+    font-size: 16px;
+    padding-left: 10px;
+   
+}
+@media screen and (max-width:576px){
+.location .local i {
+     font-size: 35px;
+    margin: 10px 20px;
+    color: rgb(185, 2, 2);
+}
+}

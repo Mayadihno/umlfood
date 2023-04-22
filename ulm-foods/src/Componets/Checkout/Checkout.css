@@ -1,0 +1,32 @@
+.paper{
+    padding: 30px;
+    margin: 18px 0px;
+}
+.typo{
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 26px;
+    font-weight: 600;
+    color: rgb(2, 2, 32);
+    text-transform: uppercase;
+    word-spacing: 4px;
+}
+.paperbottom{
+    margin-bottom: 200px;
+}
+@media screen and (max-width:567px) {
+    .paper{
+        padding: 10px;
+    }
+    .typo{
+        margin: 20px 0px;
+        font-weight: 400;
+    }
+    .confirm{
+        text-align: center;
+        font-size: 16px;
+        margin-top: 12px;
+        font-weight: 900;
+        color: black;
+    }
+}

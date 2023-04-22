@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,600;0,700;1,300;1,400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+#back {
+    background: rgba(0, 0, 0, 0.7) !important;
+        height: 100% !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-blend-mode: darken !important;
+}
+.bottomMargin{
+    margin-bottom: 200px;
+}
+
+@media screen and (min-width:0px) and (max-width:330px) {
+    body{
+        min-width: 100vw;
+    }
+    
+    .downSection .buttons button{
+        padding: 12px !important;
+    }
+}
+@media only screen and (min-width:767px) and (max-width:1024px) {
+    .cartItem {
+       max-width: 220px;
+       
+    }
+    .cartItem .card-body .name h4{
+        font-size: 12px;
+    }
+    .cartItem .card-footer .add button{
+        margin: 0px !important;
+        padding: 5px !important;
+    }
+}
