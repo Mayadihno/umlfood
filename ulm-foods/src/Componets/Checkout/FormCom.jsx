@@ -9,6 +9,7 @@ const FormCom = ({
   shippingData,
   nextStep,
   refreshCart,
+  delivery,
 }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -104,14 +105,16 @@ const FormCom = ({
           <Button variant="outlined" onClick={backStep}>
             Back
           </Button>
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            onClick={() => refreshCart()}
-          >
-            Order&nbsp;&nbsp; {checkOutToken.subtotal.formatted_with_symbol}
-          </Button>
+          {delivery && (
+            <Button
+              type="submit"
+              variant="contained"
+              color="primary"
+              onClick={() => refreshCart()}
+            >
+              Order&nbsp;&nbsp; {checkOutToken.subtotal.formatted_with_symbol}
+            </Button>
+          )}
         </div>
       </form>
     </React.Fragment>

@@ -1,35 +1,33 @@
-require("dotenv").config({ path: "./.env" });
 const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+require("dotenv").config();
+
 const app = express();
-const { resolve } = require("path");
-// Replace if using a different env file or config
-
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: "2022-08-01",
-});
-
-app.use(express.static(process.env.STATIC_DIR));
-// app.use(express.static("public"));
+const Stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static("public"));
+app.use(express.json());
 
 app.get("/", (req, res) => {
-  const path = resolve(process.env.STATIC_DIR + "/index.html");
-  res.sendFile(path);
+  res.send("Hello world");
 });
 
-app.get("/config", (req, res) => {
-  res.send({
-    publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
-  });
-});
+const calculateOrderAmount = (items) => {
+  const totalPrice = items * 100;
+  return totalPrice;
+};
 
 app.post("/create-payment-intent", async (req, res) => {
   try {
-    const paymentIntent = await stripe.paymentIntents.create({
-      currency: "dkk",
-      amount: 1999,
+    const { items } = req.body;
+    const paymentIntent = await Stripe.paymentIntents.create({
+      currency: "DKK",
+      amount: calculateOrderAmount(items),
       automatic_payment_methods: { enabled: true },
     });
-
     // Send publishable key and PaymentIntent details to client
     res.send({
       clientSecret: paymentIntent.client_secret,
