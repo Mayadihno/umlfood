@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   PaymentElement,
   useStripe,
   LinkAuthenticationElement,
   useElements,
+  AddressElement,
 } from "@stripe/react-stripe-js";
 import "./StripeCss.css";
 import { useNavigate } from "react-router-dom";
@@ -100,20 +101,45 @@ export default function CheckoutForm({
     layout: "tabs",
   };
   return (
-    <form id="payment-form" onSubmit={handleSubmit}>
-      <LinkAuthenticationElement
-        id="link-authentication-element"
-        value={email}
-        onChange={(e) => setEmail(e.target)}
-      />
-      <PaymentElement id="payment-element" options={paymentElementOptions} />
-      <button
-        className="button"
-        disabled={isLoading || !stripe || !elements}
-        id="submit"
-      >
-        <span id="button-text">{isLoading ? "Processing..." : "Pay now"}</span>
-      </button>
-    </form>
+    <React.Fragment>
+      {isLoading ? (
+        "Laoding"
+      ) : (
+        <form id="payment-form" onSubmit={handleSubmit}>
+          <LinkAuthenticationElement
+            id="link-authentication-element"
+            value={email}
+            onChange={(e) => setEmail(e.target)}
+          />
+          <PaymentElement
+            id="payment-element"
+            options={paymentElementOptions}
+          />
+          <AddressElement
+            options={{
+              mode: "shipping",
+              defaultValues: {
+                name: shippingData.firstname + shippingData.lastname,
+                address: {
+                  line1: shippingData.address1,
+                  city: shippingData.city,
+                  country: shippingData.shippingCountry,
+                  postal_code: shippingData.zip,
+                },
+              },
+            }}
+          />
+          <button
+            className="button"
+            disabled={isLoading || !stripe || !elements}
+            id="submit"
+          >
+            <span id="button-text">
+              {isLoading ? "Processing..." : "Pay now"}
+            </span>
+          </button>
+        </form>
+      )}
+    </React.Fragment>
   );
 }

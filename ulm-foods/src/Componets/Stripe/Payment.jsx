@@ -5,13 +5,17 @@ import { loadStripe } from "@stripe/stripe-js";
 const stripePromise = loadStripe(
   "pk_live_51MelhiGA3s2eyDw7rPB3II6t0XQDxLsZLFs4AmkgGcb9zlwSnCn2eAsmQjGmYNUEl75WlNtkFWFvyA8baKHDeB7y00bxTUcWHT"
 );
+// "pk_test_51MelhiGA3s2eyDw7jIr18uJyBiHkjmgzJcVLaYbuiYm7XZkaFsvQr3eygQaWGpchXSNHFR6XI2lTStpMNSL5obiG00xalO9tnQ"
+// "pk_live_51MelhiGA3s2eyDw7rPB3II6t0XQDxLsZLFs4AmkgGcb9zlwSnCn2eAsmQjGmYNUEl75WlNtkFWFvyA8baKHDeB7y00bxTUcWHT"
 const Payment = ({ checkOutToken, shippingData, refreshCart }) => {
   const [clientSecret, setClientSecret] = useState("");
   const totalPrices = checkOutToken?.subtotal.raw;
 
   useEffect(() => {
+    //http://localhost:5252
     // Create PaymentIntent as soon as the page loads
-    fetch("http://localhost:5252/create-payment-intent", {
+    //https://uml-server.onrender.com/create-payment-intent
+    fetch("https://uml-server.onrender.com/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items: totalPrices }),
