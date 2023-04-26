@@ -102,44 +102,37 @@ export default function CheckoutForm({
   };
   return (
     <React.Fragment>
-      {isLoading ? (
-        "Laoding"
-      ) : (
-        <form id="payment-form" onSubmit={handleSubmit}>
-          <LinkAuthenticationElement
-            id="link-authentication-element"
-            value={email}
-            onChange={(e) => setEmail(e.target)}
-          />
-          <PaymentElement
-            id="payment-element"
-            options={paymentElementOptions}
-          />
-          <AddressElement
-            options={{
-              mode: "shipping",
-              defaultValues: {
-                name: shippingData.firstname + shippingData.lastname,
-                address: {
-                  line1: shippingData.address1,
-                  city: shippingData.city,
-                  country: shippingData.shippingCountry,
-                  postal_code: shippingData.zip,
-                },
+      <form id="payment-form" onSubmit={handleSubmit}>
+        <LinkAuthenticationElement
+          id="link-authentication-element"
+          value={email}
+          onChange={(e) => setEmail(e.target)}
+        />
+        <PaymentElement id="payment-element" options={paymentElementOptions} />
+        <AddressElement
+          options={{
+            mode: "shipping",
+            defaultValues: {
+              name: shippingData.firstname + " " + shippingData.lastname,
+              address: {
+                line1: shippingData.address1,
+                city: shippingData.city,
+                country: shippingData.shippingCountry,
+                postal_code: shippingData.zip,
               },
-            }}
-          />
-          <button
-            className="button"
-            disabled={isLoading || !stripe || !elements}
-            id="submit"
-          >
-            <span id="button-text">
-              {isLoading ? "Processing..." : "Pay now"}
-            </span>
-          </button>
-        </form>
-      )}
+            },
+          }}
+        />
+        <button
+          className="button"
+          disabled={isLoading || !stripe || !elements}
+          id="submit"
+        >
+          <span id="button-text">
+            {isLoading ? "Processing..." : "Pay now"}
+          </span>
+        </button>
+      </form>
     </React.Fragment>
   );
 }
