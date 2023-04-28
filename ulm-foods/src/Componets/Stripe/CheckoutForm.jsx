@@ -65,7 +65,7 @@ export default function CheckoutForm({
       return;
     }
     setIsLoading(true);
-    const { paymentIntent } = await stripe.confirmPayment({
+    const { error, paymentIntent } = await stripe.confirmPayment({
       elements,
       confirmParams: {
         receipt_email: email,
@@ -93,6 +93,11 @@ export default function CheckoutForm({
         refreshCart();
         toast.success("Payment made successfully");
       }
+    }
+    if (error.type === "card_error" || error.type === "validation_error") {
+      toast.error(error.message);
+    } else {
+      toast.error("An unexpected error occurred.");
     }
     setIsLoading(false);
   };
